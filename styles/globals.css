@@ -87,12 +87,7 @@ body {
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  font-family: var(--font-mono);
 }
 
 a {
@@ -105,3 +100,42 @@ a {
     color-scheme: dark;
   }
 }
+
+
+/*убирает на карте все лишние надписи, кроме гугл*/
+.gmnoprint a,
+.gmnoprint span {
+  display: none;
+}
+.gmnoprint div {
+  background: none !important;
+}
+
+/*Анимация лоадера*/
+.loader {
+  opacity: 0;
+  animation: fade 0.4s ease-in forwards;
+}
+
+/*Плавность анимации лоадера*/
+@keyframes fade {
+  0% {
+    opacity: 0.4;
+  }
+  50% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/*Скрытие горизонтального скролинга при выборе типа машины*/
+.hide-scroll-bar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.hide-scroll-bar::-webkit-scrollbar {
+  display: none;
+}
+
