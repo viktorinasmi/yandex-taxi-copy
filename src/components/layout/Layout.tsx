@@ -16,7 +16,7 @@ export const Layout = ({ title, children }: ILayout) => {
   const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
-    setIsLoading(true);
+    // setIsLoading(true);
 
     //отключение загрузки
     const timeout = setTimeout(() => {
